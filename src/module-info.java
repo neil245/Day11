@@ -1,2 +1,3 @@
 module MoodAnalyzer {
+	requires junit;
 }
