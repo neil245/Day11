@@ -8,18 +8,20 @@ import org.junit.Test;
 
 public class MoodAnalyzerTest {
 	
-MoodAnalyzer ob = new MoodAnalyzer();
 
 	
 	@Test
 	public void test() {
-		String var = ob.analyseMood("I am super ");
+		MoodAnalyzer ob = new MoodAnalyzer("I am super ");
+
+		String var = ob.analyseMood();
 		Assert.assertEquals("SAD",var);
 		System.out.println(var);
 	}
 	@Test
 	public void test1() {
-		String var = ob.analyseMood("I am gladiator");
+		MoodAnalyzer ob = new MoodAnalyzer("I am super happy");
+		String var = ob.analyseMood();
 		Assert.assertEquals("HAPPY",var);
 		System.out.println(var);
 	}
